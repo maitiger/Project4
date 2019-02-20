@@ -1,3 +1,41 @@
-﻿body {
-    
+﻿.Recomment-Box .item {
+    float: left;
+    padding: 10px;
+
+}
+.Recomment-Box {
+    padding-bottom: 5px;
+    overflow: hidden;
+}  
+.row10
+{
+    margin-left: -10px;
+    margin-right: -10px;
+}
+body {
+    font-family: Arial,"Open Sans",Helvetica,Arial,sans-serif;
+    color: #1d2129;
+    font-size: 14px;
+}
+.recommend-cuisine-box .item a {
+    position: relative;
+    overflow: hidden;
+    font-weight: bold;
+    vertical-align: baseline;
+    text-align: center;
+    padding: 10px 15px;
+    width: 125px;
+    display: block;
+    background-color: #fff;
+    font-size: 12px;
+    border-radius: 12px;
+    border: .5px solid #ddd;
+}
+
+a {
+    color: #333;
+    white-space: nowrap;
+}
+box3{
+
 }

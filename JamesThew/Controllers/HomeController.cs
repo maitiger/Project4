@@ -12,6 +12,9 @@ namespace JamesThew.Controllers
     {
         public IActionResult Index()
         {
+            ViewBag.JameJob = " I 'm Jame Threw ";
+            ViewBag.Infor = " 1/2/1988";
+           
             return View();
         }
 
@@ -31,6 +34,46 @@ namespace JamesThew.Controllers
 
         public IActionResult Privacy()
         {
+            return View();
+        }
+        public IActionResult Recipe()
+        {
+            ViewData["Message"] = "Your contact page.";
+
+            return View();
+        }
+
+        public IActionResult Forum()
+        {
+            ViewData["Message"] = "Your contact page.";
+
+            return View();
+        }
+
+        public IActionResult Collection()
+        {
+            ViewData["Message"] = "Your contact page.";
+
+            return View();
+        }
+
+        public IActionResult Video()
+        {
+            ViewData["Message"] = "Your contact page.";
+
+            return View();
+        }
+
+        public IActionResult GoldMember()
+        {
+            ViewData["Message"] = "Your contact page.";
+
+            return View();
+        }
+        public IActionResult CulinaryCompetition()
+        {
+            ViewData["Message"] = "Your contact page.";
+
             return View();
         }
 
