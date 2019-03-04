@@ -47,7 +47,8 @@ body {
         float: left;
         padding: 10px;
         margin: 5px;
-        background-image: url(http://inspiredboy.com/uploads/201603/thumb/gorgeous-pink-sakura-sea-vector-material-1-c77ee145e3642573080aa65cdb0fd0ff.jpg);
+background:#7c0202;
+
     }
         .Recipe-Box .item-Box a .Recipe-ico {
             height: 36px;
@@ -68,8 +69,37 @@ body {
 .Recipe-Box .col-md-12 .item-Box a {
     font-weight: bold;
     font-size: 12px;
+    color:#fff;
 }
 .col-md-4 a .Cr-img {
-   margin:5px;
-   padding:15px;
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+}
+.col-md-4 a .Vb-img {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+}
+.col-md-3 a .Rb-img {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+}
+.col-md-4 a {
+    font-weight: bold;
+    font-size: 12px;
+    color: black;
+}
+.Content .col-md-9 .col-md-4 {
+    border-radius: 10px;
+}
+.ABC {
+    background-image: url(http://210.211.97.114:84/appimages/images/contents/c/h/cherry-blossom-flowers-backgrounds-vector0.jpg);
+    height:auto;
+    width:100%;
+}
+.Footer{
+    margin: 30px;
+    border:thin;
 }
