@@ -35,3 +35,37 @@ body {
         display: none;
     }
 }
+
+.Recipe-Box {
+    padding-bottom: 5px;
+    overflow: hidden;
+    margin-left: -10px;
+    margin-right: -10px;
+    border-radius: 15px;
+}
+    .Recipe-Box .item-Box {
+        float: left;
+        padding: 10px;
+        margin: 5px;
+        background-image: url(http://inspiredboy.com/uploads/201603/thumb/gorgeous-pink-sakura-sea-vector-material-1-c77ee145e3642573080aa65cdb0fd0ff.jpg);
+    }
+        .Recipe-Box .item-Box a .Recipe-ico {
+            height: 36px;
+        } 
+       
+        .Recipe-Box .item-Box a image {
+            margin: 0 auto;
+            display: block;
+            position: relative;
+        }
+.Recipe-ico {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: inherit;
+    backface-visibility: inherit;
+    background-color: transparent;
+}
+.Recipe-Box .col-md-12 .item-Box a {
+    font-weight: bold;
+    font-size: 12px;
+}

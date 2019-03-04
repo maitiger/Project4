@@ -12536,11 +12536,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Cac Thu Cac Thu\\ProjectNhom4\\JamesThew\\Project4-master\\J4\\J4\\J4.csproj",
+      "projectUniqueName": "D:\\Cac Thu Cac Thu\\ProjectNhom4\\JamesThew\\Project4\\J4\\J4\\J4.csproj",
       "projectName": "J4",
-      "projectPath": "D:\\Cac Thu Cac Thu\\ProjectNhom4\\JamesThew\\Project4-master\\J4\\J4\\J4.csproj",
+      "projectPath": "D:\\Cac Thu Cac Thu\\ProjectNhom4\\JamesThew\\Project4\\J4\\J4\\J4.csproj",
       "packagesPath": "C:\\Users\\allth\\.nuget\\packages\\",
-      "outputPath": "D:\\Cac Thu Cac Thu\\ProjectNhom4\\JamesThew\\Project4-master\\J4\\J4\\obj\\",
+      "outputPath": "D:\\Cac Thu Cac Thu\\ProjectNhom4\\JamesThew\\Project4\\J4\\J4\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
