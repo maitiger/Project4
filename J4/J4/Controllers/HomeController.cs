@@ -15,7 +15,25 @@ namespace J4.Controllers
             return View();
         }
 
-        public IActionResult About()
+        public IActionResult Announcements()
+        {
+            ViewData["Message"] = "Your application description page.";
+
+            return View();
+        }
+         public IActionResult Contests()
+        {
+            ViewData["Message"] = "Your application description page.";
+
+            return View();
+        }
+         public IActionResult FAQ()
+        {
+            ViewData["Message"] = "Your application description page.";
+
+            return View();
+        }
+         public IActionResult Feedback()
         {
             ViewData["Message"] = "Your application description page.";
 
@@ -29,7 +47,7 @@ namespace J4.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Recipes()
         {
             return View();
         }
