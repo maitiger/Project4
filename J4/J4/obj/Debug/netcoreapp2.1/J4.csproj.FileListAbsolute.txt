@@ -210,3 +210,8 @@ D:\Cac Thu Cac Thu\ProjectNhom4\JamesThew\Project4\J4\J4\obj\Debug\netcoreapp2.1
 D:\Cac Thu Cac Thu\ProjectNhom4\JamesThew\Project4\J4\J4\obj\Debug\netcoreapp2.1\J4.dll
 D:\Cac Thu Cac Thu\ProjectNhom4\JamesThew\Project4\J4\J4\obj\Debug\netcoreapp2.1\J4.pdb
 D:\Cac Thu Cac Thu\ProjectNhom4\JamesThew\Project4\J4\J4\obj\Debug\netcoreapp2.1\J4.csproj.CopyComplete
+D:\Cac Thu Cac Thu\ProjectNhom4\JamesThew\Project4\J4\J4\obj\Debug\netcoreapp2.1\Razor\Views\Recipes\Create.g.cshtml.cs
+D:\Cac Thu Cac Thu\ProjectNhom4\JamesThew\Project4\J4\J4\obj\Debug\netcoreapp2.1\Razor\Views\Recipes\Delete.g.cshtml.cs
+D:\Cac Thu Cac Thu\ProjectNhom4\JamesThew\Project4\J4\J4\obj\Debug\netcoreapp2.1\Razor\Views\Recipes\Details.g.cshtml.cs
+D:\Cac Thu Cac Thu\ProjectNhom4\JamesThew\Project4\J4\J4\obj\Debug\netcoreapp2.1\Razor\Views\Recipes\Edit.g.cshtml.cs
+D:\Cac Thu Cac Thu\ProjectNhom4\JamesThew\Project4\J4\J4\obj\Debug\netcoreapp2.1\Razor\Views\Recipes\Index.g.cshtml.cs

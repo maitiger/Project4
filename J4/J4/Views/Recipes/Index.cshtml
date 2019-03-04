@@ -1,0 +1,93 @@
+﻿@model IEnumerable<J4.Models.Recipes>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<center><h3> Recipes </h3></center>
+@foreach (var item in Model) {  }
+<div>
+    @foreach (var item in Model)
+    {
+        <div class="Recipe-Row">
+            <div class="Box">
+                <div class="item-img">
+                    <a class="photo" href="https://localhost:44311/Recipes/Details/ @item.Id">
+                       
+                            <img src="@Html.DisplayFor(modelItem => item.Image)" />
+
+                    </a>
+                </div>
+                <div class="item-info">
+                    <div class="Name">
+                            <h4> @Html.DisplayFor(modelItem => item.Name)</h4>
+                    </div>
+                    <div class="Role">
+                            <h4> @Html.DisplayFor(modelItem => item.role)</h4>
+                    </div>
+                </div>
+                <div class="Status">
+                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                        <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </div>
+
+            </div>
+
+        </div>
+    }
+    </div>
+
+                    @*<h2>Index</h2>
+
+        <p>
+            <a asp-action="Create">Create New</a>
+        </p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Image)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Resources)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Recipe)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.role)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+        @foreach (var item in Model) {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Image)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Resources)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Recipe)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.role)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+        }
+            </tbody>
+        </table>*@

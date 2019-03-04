@@ -14,6 +14,7 @@ namespace J4.Models
         public int Id { get; set; }
         public string Image { get; set; }
         public string Name { get; set; }
+
         public string Resources { get; set; }
         public string Recipe { get; set; }
         public Role role { get; set; }

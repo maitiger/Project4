@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using J4.Models;
 
 namespace J4.Data
 {
@@ -12,5 +13,6 @@ namespace J4.Data
             : base(options)
         {
         }
+        public DbSet<J4.Models.Recipes> Recipes { get; set; }
     }
 }

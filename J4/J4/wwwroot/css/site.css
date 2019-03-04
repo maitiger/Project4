@@ -47,17 +47,18 @@ body {
         float: left;
         padding: 10px;
         margin: 5px;
-background:#7c0202;
-
+        background: #fff;
+        width: 11.58%;
     }
         .Recipe-Box .item-Box a .Recipe-ico {
             height: 36px;
         } 
        
         .Recipe-Box .item-Box a image {
-            margin: 0 auto;
+            margin: 15px;
             display: block;
             position: relative;
+            
         }
 .Recipe-ico {
     background-size: cover;
@@ -66,10 +67,40 @@ background:#7c0202;
     backface-visibility: inherit;
     background-color: transparent;
 }
+.Recipe-Row{
+    float: left;
+    position: relative;
+    width: 25%;
+    overflow: hidden;
+    padding: 10px;
+}
+.Box {
+    position: relative;
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: 2px 2px 5px 0 rgba(0,0,0,.1);
+    border-radius: 12px;
+}
+.Recipe-Row .Box .item-img a {
+    display: block;
+    overflow: hidden;
+}
+.Recipe-Row .Box .item-img image {
+    width: 100%;
+}
+.Recipe-Row .Box .item-img {
+    background-color: #f2f2f2;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    min-width: 240px;
+    height:auto;
+}
+}
 .Recipe-Box .col-md-12 .item-Box a {
     font-weight: bold;
     font-size: 12px;
-    color:#fff;
+    color: black;
 }
 .col-md-4 a .Cr-img {
     border-radius: 10px;
@@ -86,6 +117,7 @@ background:#7c0202;
     width: 100%;
     height: auto;
 }
+
 .col-md-4 a {
     font-weight: bold;
     font-size: 12px;
@@ -103,3 +135,6 @@ background:#7c0202;
     margin: 30px;
     border:thin;
 }
+/*.col-md-12{
+    margin-left: 
+}*/
