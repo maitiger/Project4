@@ -7,9 +7,12 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using J4.Data;
 using J4.Models;
+using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Authorization;
 
 namespace J4.Controllers
 {
+    [Authorize(nameof(""))]
     public class ContestsController : Controller
     {
         private readonly ApplicationDbContext _context;
