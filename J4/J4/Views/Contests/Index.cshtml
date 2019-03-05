@@ -1,0 +1,97 @@
+﻿@model IEnumerable<J4.Models.Contests>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Contests</h2>
+
+<div>
+    @foreach (var item in Model)
+    {
+        <div class="Contests-Row">
+            <div class="Box">
+                <div class="item-video">
+                    @*<a class="video" href="https://localhost:44311/Recipes/Details/ @item.Id">*@
+                    <video width="100%" height="240px" controls>
+                        <source src="@Html.DisplayFor(modelItem => item.UrlVideo)" type="video/mp4">
+                        <source src="@Html.DisplayFor(modelItem => item.UrlVideo)" type="video/mp4">
+                        Your browser does not support HTML5 video.
+                    </video>
+
+                    @*</a>*@
+                </div>
+                <div class="item-info">
+
+                    <div class="Name">
+                        <h4> @Html.DisplayFor(modelItem => item.Name)</h4>
+                    </div>
+                    <div class="Role">
+                        <h4> @Html.DisplayFor(modelItem => item.role)</h4>
+                    </div>
+                    <div class="Link">
+                        <a href="@Html.DisplayFor(modelItem => item.LinkRegis)"><h4>Sign up for the contests</h4></a>
+                    </div>
+                </div>
+                <div class="Status">
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </div>
+
+            </div>
+
+        </div>
+    }
+</div>
+@*<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UrlVideo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Describle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LinkRegis)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.role)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UrlVideo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Describle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LinkRegis)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.role)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>*@
