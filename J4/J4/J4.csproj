@@ -16,6 +16,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Controllers\RecipesController.cs">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Update="Views\Home\Feedback.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>

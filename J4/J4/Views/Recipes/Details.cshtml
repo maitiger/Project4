@@ -3,45 +3,333 @@
 @{
     ViewData["Title"] = "Details";
 }
+<style>
+    .border {
+        border: 5px solid #f1f1f1;
+        border-radius: 5px;
+        padding: 10px 5px;
+        background-color: #fff;
+    }
 
-<h2>Details</h2>
+    .name-recipes {
+        text-align: center;
+    }
 
-<div>
-    <h4>Recipes</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Image)
-        </dt>
-        <dd>
-           <img src="@Html.DisplayFor(model => model.Image)" />
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Resources)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Resources)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Recipe)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Recipe)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.role)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.role)
-        </dd>
-    </dl>
+    .recipe-navbar {
+        overflow: hidden;
+        clear: both;
+        margin: 15px 0;
+    }
+
+        .recipe-navbar .nav {
+            border: .5px solid #ddd;
+            background-color: #fff;
+            font-size: 16px;
+            margin-left: 30px;
+            overflow: hidden;
+        }
+
+        .recipe-navbar li {
+            display: block;
+            float: left;
+            overflow: hidden;
+        }
+
+            .recipe-navbar li a {
+                display: block;
+                padding: 20px 90px;
+                font-weight: bold;
+                color: #000;
+            }
+
+    .cmt {
+        border: 5px solid #ddd;
+        background-color: #fff;
+        font-size: 16px;
+        border-radius: 16px;
+        float: left;
+        margin: 15px 10px;
+        padding: 20px 90px;
+    }
+
+    .Recipe {
+        padding: 25px 0;
+    }
+
+    .abc1 {
+        padding: 30px;
+        padding-right: 10px;
+        border: 3px solid #fff;
+        border-radius: 13px;
+    }
+
+    .item-wrapper {
+        width: 50%;
+        float: left;
+    }
+
+    .related-recipe-box .headline {
+        padding: 0 0 10px 0;
+        text-align: center;
+        border-bottom: .5px solid #eee;
+    }
+
+        .related-recipe-box .headline h3 {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+    .related-recipe-list {
+        padding: 5px;
+    }
+
+    .row {
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+
+    .related-recipe-list .item-wrapper {
+        width: 50%;
+        float: left;
+    }
+
+    .related-recipe-list .item {
+        padding: 10px;
+        clear: both;
+        overflow: hidden;
+    }
+
+        .related-recipe-list .item .photo {
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+    a {
+        color: #333;
+        white-space: nowrap;
+    }
+
+    .img-responsive, .thumbnail > img, .thumbnail a > img, .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .related-recipe-list .item .info {
+        padding: 5px 0;
+        overflow: hidden;
+    }
+
+    .related-recipe-list .item-wrapper {
+        width: 50%;
+        float: left;
+    }
+
+    .h1-role {
+        color: crimson;
+    }
+
+    .role1 {
+        float: left;
+    }
+
+        .role1 h1 {
+            text-shadow: 2px 2px 2px #cc0000;
+        }
+
+    .resources h1 {
+        text-indent: 15px;
+    }
+
+    .resources p {
+        text-indent: 30px;
+    }
+
+    .Recipe1 h1 {
+        text-indent: 15px;
+    }
+
+    .Recipe1 p {
+        text-indent: 30px;
+        letter-spacing: 0.5px;
+        line-height: 2em;
+    }
+
+    .role {
+        text-indent: 40px;
+    }
+</style>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">J4</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                <li><a asp-area="" asp-controller="Recipes" asp-action="Index">Recipes</a></li>
+                <li><a asp-area="" asp-controller="Home" asp-action="Contests">Contests</a></li>
+                <li><a asp-area="" asp-controller="Home" asp-action="Announcements">Announcements</a></li>
+                <li><a asp-area="" asp-controller="Home" asp-action="Feedback">Feedback</a></li>
+                <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                <li><a asp-area="" asp-controller="Home" asp-action="FAQ">FAQ's</a></li>
+
+            </ul>
+            <partial name="_LoginPartial" />
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-9 border">
+            <div class="name-recipes">
+                <img src="@Html.DisplayFor(model => model.Image)" />
+            </div>
+            <div class="name-recipes">
+
+                <h2><b>Name Food :</b> @Html.DisplayFor(model => model.Name)  </h2>
+                <p><span>Resources:</span>@Html.DisplayFor(model => model.Resources) </p>
+            </div>
+        </div>
+
+        <div class="col-md-3 border">
+            <div style="border-bottom:2px solid #fff;">
+                <h2><b>Món ăn liên quan</b></h2>
+            </div>
+
+            <div class="col-md-6 border item-wrapper">
+
+
+
+            </div>
+            <div class="col-md-6 border">
+
+
+            </div>
+
+
+        </div>
+    </div>
 </div>
+<div class="row mt-3">
+    <div class="col-sm-9">
+        <div class="recipe-navbar">
+            <ul class="ist-inline nav">
+                <li class="active"><a href="">Công thức</a></li>
+                <li class="active"><a href="">Bình luận</a></li>
+                <li class="active"><a href="">Hình thức hiện</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row mt-3">
+        <div class="col-sm-9 border">
+            <div class="resources">
+                <h1> @Html.DisplayNameFor(model => model.Resources)</h1>
+                <p>   @Html.DisplayFor(model => model.Resources)</p>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row mt-3">
+        <div class="col-sm-9 border">
+            <div class="Recipe1">
+                <h1>  @Html.DisplayNameFor(model => model.Recipe)</h1>
+                <p>@Html.DisplayFor(model => model.Recipe)</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="container">
+    <div class="row mt-3">
+        <div class="col-sm-9 border ">
+            <div class="role">
+                <div class="role1">
+                    <h2>   @*@Html.DisplayNameFor(model => model.role)*@ <b>Role:</b></h2>
+                </div>
+                <div class="role1">
+                    <h1 class="h1-role">  @Html.DisplayFor(model => model.role)</h1>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-sm-9 border">
+
+            <div class="col-sm-4 abc1">
+                <center>Cường thực hiện</center>
+                <img src="https://media.cooky.vn/community/g13/121564/s200x200/cooky-community-post-82086-636675006341856127.jpg" />
+
+            </div>
+            <div class="col-sm-4 abc1">
+                <center>Cường thực hiện</center>
+                <img src="https://media.cooky.vn/community/g13/121564/s200x200/cooky-community-post-82086-636675006341856127.jpg" />
+
+            </div>
+            <div class="col-sm-4 abc1">
+                <center>Cường thực hiện</center>
+
+                <img src="https://media.cooky.vn/community/g13/121564/s200x200/cooky-community-post-82086-636675006341856127.jpg" />
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+@*<div>
+
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Image)
+            </dt>
+            <dd>
+               <img src="@Html.DisplayFor(model => model.Image)" />
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Resources)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Resources)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Recipe)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Recipe)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.role)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.role)
+            </dd>
+        </dl>
+    </div>*@
 <div>
     <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
     <a asp-action="Index">Back to List</a>

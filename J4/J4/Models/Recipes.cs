@@ -11,15 +11,18 @@ namespace J4.Models
         {
             this.role = Role.Free;
         }
-        public int Id { get; set; }
+        public int Id_Recipes { get; set; }
         public string Image { get; set; }
         public string Name { get; set; }
 
         public string Resources { get; set; }
         public string Recipe { get; set; }
+
         public Role role { get; set; }
+        public virtual ICollection<Category> Categories { get; set; }
 
     }
+  
     public enum Role
     {
         Free = 0,

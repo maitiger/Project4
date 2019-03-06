@@ -12,7 +12,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace J4.Controllers
 {
-    [Authorize(nameof(""))]
+    //[Authorize(nameof(""))]
     public class ContestsController : Controller
     {
         private readonly ApplicationDbContext _context;
